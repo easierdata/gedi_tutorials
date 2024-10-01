@@ -1,0 +1,15 @@
+# Ignore ccontent in the following folders
+subsets/
+full_orbits/
+
+# Ignore the following files in the root directory
+*.pyc
+*.pyo
+*granules.txt
+
+
+# Ignore the folder .ipynb_checkpoints
+.ipynb_checkpoints
+**__pycache__**
+
+
