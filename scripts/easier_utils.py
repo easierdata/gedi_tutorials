@@ -1,6 +1,3 @@
-import requests
-
-
 # Print out a list of properties and methods available to the client object but disregard any of the `__` properties. Additionally,  Specify what's a property and whats a method.
 # Identify the client object with the longest name
 def print_properties(obj):
@@ -66,7 +63,7 @@ Expand the `alternate` property below to see where it can be sourced from.
 def get_cid_payload(granule):
 
     granule_cid_payload = {}
-    for g in granule.items:
+    for g in granule:
         # Grab the asset we want based on values in the key
         selected_asset_key = [
             source for source in g.assets.keys() if "gov/protected" in source
