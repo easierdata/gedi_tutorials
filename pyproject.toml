@@ -4,7 +4,7 @@ version = "0.1.0"
 description = ""
 authors = ["Seth Docherty <sddocherty@gmail.com>"]
 readme = "README.md"
-package-mode = false
+packages = [{ include = "scripts" }]
 
 [tool.poetry.dependencies]
 python = "^3.11"
@@ -34,6 +34,13 @@ ipfsspec = "^0.5.2"
 geopandas = "0.14.3"
 fiona = "1.9.6" # https://github.com/Toblerity/Fiona/issues/1440#issuecomment-2329694317
 notebook = "^7.2.2"
+
+[tool.poetry.scripts]
+edit-config = "scripts.poetry_cmds:modify_config_file"
+print-default = "scripts.poetry_cmds:print_default_config"
+reset-config = "scripts.poetry_cmds:reset_config_file"
+check-config = "scripts.poetry_cmds:check_config"
+
 
 [build-system]
 requires = ["poetry-core"]
