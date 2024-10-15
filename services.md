@@ -1,8 +1,10 @@
 # Data Tools and Services for GEDI Level 3 and 4A/B Products
 
-| Data Tools/Services                                                                                                        | GEDI L3 | GEDI L4A | GEDI L4B |
+| Decentralized Access                                                                                                        | GEDI L3 | GEDI L4A | GEDI L4B |
 | -------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- |
-| [Easier STAC](http:///easier.umd.edu/browse/)             | Y       | Y        | Y        |
+| [Easier STAC API Endpoint](http:///stac.easierdata.info)             | Y       | Y        | Y        |
+| Centralized Access                                                                                                        | GEDI L3 | GEDI L4A | GEDI L4B |
+| -------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- |
 | [NASA Earthdata Cloud (including direct S3 access)](https://data.ornldaac.earthdata.nasa.gov/s3credentialsREADME)             | Y       | Y        | Y        |
 | [NASA Earthdata Search/Common Metadata Repository (CMR) API](https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html) | Y       | Y        | Y        |
 | [NASA Earthdata Search Subscription Service](https://search.earthdata.nasa.gov/search?fi=GEDI)                                | Y       | Y        | Y        |
