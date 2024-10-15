@@ -9,3 +9,4 @@ full_orbits/
 *.pyc
 *.pyo
 *granules.txt
+*config.json
