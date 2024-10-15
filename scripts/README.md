@@ -74,3 +74,19 @@ This script accesses the GEDI L4A dataset using [NASA's OPeNDAP Hyrax](https://o
 ```bash
 ./gedi_l4a_hyrax.py --doi 10.3334/ORNLDAAC/2056 --date1 2019-12-15 --date2 2020-01-12 --poly ../polygons/amapa.json --beams BEAM0101,BEAM0110,BEAM1000,BEAM1011 --variables agbd,agbd_t,agbd_t_se,l4_quality_flag,land_cover_data/pft_class --outfile ../subsets/amapa_l4a_hyrax.csv
 ```
+
+## 4. poetry_cmds.py
+This script contains a set of defined command functions that are called with with the [`run` command](https://python-poetry.org/docs/cli#run) from poetry. Here are the available commands:
+
+- **edit-config**: Modify the configuration file interactively through the command line.
+- **print-config**: Print the default configuration file.
+- **reset-config**: Reset the configuration file back to the default settings.
+- **check-config**: Check that the configuration file is valid and that the IPFS and STAC endpoints are reachable.
+
+### usage
+```bash
+poetry run <command>
+```
+
+## 5. easier_utils.py
+This script contains a set of utility functions that are reused across the notebooks and scripts in this repository. 
