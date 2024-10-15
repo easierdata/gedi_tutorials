@@ -3,6 +3,7 @@
 | Decentralized Access                                                                                                        | GEDI L3 | GEDI L4A | GEDI L4B |
 | -------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- |
 | [Easier STAC API Endpoint](http:///stac.easierdata.info)             | Y       | Y        | Y        |
+
 | Centralized Access                                                                                                        | GEDI L3 | GEDI L4A | GEDI L4B |
 | -------------------------------------------------------------------------------------------------------------------------- | ------- | -------- | -------- |
 | [NASA Earthdata Cloud (including direct S3 access)](https://data.ornldaac.earthdata.nasa.gov/s3credentialsREADME)             | Y       | Y        | Y        |

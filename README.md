@@ -1,19 +1,17 @@
 # Tutorials on GEDI Science Data Products
 
 **Author:** ORNL DAAC & EASIER Data       
-**Date:** August 26, 2021
-**Updated on** October 1, 2024       
-**Contact for the ORNL DAAC:** uso@daac.ornl.gov
-**Contact for EASIER Data:** toshan@umd.edu
+**Date:** August 26, 2021       
+**Updated on:** October 1, 2024       
+**Contact for the ORNL DAAC:** uso@daac.ornl.gov       
+**Contact for EASIER Data:** toshan@umd.edu       
+**Keywords:** lidar, GEDI, AGBD, aboveground biomass, IPFS, Filecoin       
 
-**Keywords:** lidar, GEDI, AGBD, aboveground biomass, IPFS, Filecoin
 
 ## Overview      
 These tutorials demonstrate how to discover, access, and use [GEDI science data products](https://daac.ornl.gov/gedi) from decentralized sources such as IPFS. The GEDI collection is maintained and archived at the ORNL DAAC. GEDI L3, L4A, and L4B data products are available from decentralized and centralized sources as noted in [various data tools and services](services.md).
 
-## Getting Started
-
-## Clone Repo and create Python Virtual Environment
+## Getting Started: Clone repo and deploy poetry project
 
 This project uses [Poetry](https://python-poetry.org/) for dependency management and is compatible with python versions >=3.11. To install all necessary dependencies, follow these steps:
 
