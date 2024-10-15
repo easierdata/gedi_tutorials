@@ -1,3 +1,7 @@
+import subprocess
+import json
+
+
 # Print out a list of properties and methods available to the client object but disregard any of the `__` properties. Additionally,  Specify what's a property and whats a method.
 # Identify the client object with the longest name
 def print_properties(obj):
@@ -133,3 +137,99 @@ def compare_search_results(cmr_granules: list, stac_granules: list):
         ]
         if len(granules_to_remove) > 0:
             print(f"The STAC query has {len(granules_to_remove)} extra granules.")
+
+
+def get_missing_cids(cid_list: list) -> list:
+    missing_cids = list()
+    for cid in cid_list:
+        # Run the command
+        result = subprocess.run(
+            ["ipfs", "dag", "stat", cid], capture_output=True, text=True
+        )
+        # Check if the error message is in the output
+        if (
+            f"Error: block was not found locally (offline): ipld for {cid} was not found"
+            in result.stderr
+        ):
+            # Write the cid to the output file
+            missing_cids.append(cid)
+
+    return missing_cids
+
+
+# Import json file and loop through each item in the json file
+# json=$(cat "C:\github\client_projects\umd\multi-temporal-crop-classification-training-data\data\misc\filename_to_cid_mapping.json")
+# # MFS Folder to move the files to
+# mfs_foldername="crop-classification"
+
+
+def create_mfs_folder(mfs_foldername):
+    # Create MFS folder if it does not exist
+    subprocess.run(
+        ["ipfs", "files", "mkdir", "-p", "-cid-version", "1", f"/{mfs_foldername}"]
+    )
+
+
+def copy_content_to_mfs(cid, filename, mfs_foldername):
+
+    # Check if mfs filepath already exists and create it if it does not exist
+    check_mfs_path(mfs_foldername)
+
+    result = subprocess.run(
+        [
+            "ipfs",
+            "files",
+            "cp",
+            "-p",
+            f"/ipfs/{cid}",
+            f"/{mfs_foldername}/{filename}",
+        ]
+    )
+    if result.returncode == 1:
+        print(f"Error: {result.stderr}")
+    else:
+        print(f"Successfully copied {filename} to MFS folder {mfs_foldername}")
+
+
+def check_mfs_path(directory_path):
+
+    def create_mfs_folder(root_dir, dir_to_create):
+        # Create MFS folder if it does not exist
+        result = subprocess.run(
+            [
+                "ipfs",
+                "files",
+                "mkdir",
+                "-p",
+                "--cid-version",
+                "1",
+                f"{root_dir}/{dir_to_create}",
+            ]
+        )
+        if result.returncode == 1:
+            print(f"Error: {result.stderr}")
+
+    # check if path beings with a `/`
+    if directory_path[0] != "/":
+        directory_path = f"/{directory_path}"
+
+    # Get the directory parts by splitting the string at the last `/`
+    root_path, mfs_dir = directory_path.rsplit("/", 1)
+    # Get the list of directories for the
+    result = subprocess.run(
+        ["ipfs", "files", "ls", "--long", f"{root_path}"], capture_output=True
+    )
+    # If the returncode is 0 and stdout contains any directories
+    if result.returncode == 0 and len(result.stdout) > 0:
+        # Get directory path(s) by splitting by the newline marks and taking the first value
+        # which represents the directory name
+        mfs_folders = result.stdout.decode("utf-8").split("\n")[:-1]
+        mfs_folders = [folder.split("/\t")[0] for folder in mfs_folders]
+        if mfs_dir not in mfs_folders:
+            print("MFS folder does not exist. Creating it now.")
+            create_mfs_folder(root_path, mfs_dir)
+        else:
+            # Base case: the folder exists, so we can stop the recursion
+            print("MFS Folder already exists")
+    elif result.returncode == 1:
+        print(f"Error: {result.stderr}")
