@@ -233,3 +233,31 @@ def check_mfs_path(directory_path):
             print("MFS Folder already exists")
     elif result.returncode == 1:
         print(f"Error: {result.stderr}")
+
+
+def import_configuration():
+    from scripts import _cmd_utils as cmd_utils
+
+    # Check if the configuration file exists before opening
+    config_file = cmd_utils.CONFIG_FILE_NAME
+    try:
+        with open(config_file, "r") as f:
+            config = json.load(f)
+        return config
+    except FileNotFoundError as e:
+        from pathlib import Path
+        import os
+
+        cwd = Path(os.getcwd())
+        print(
+            f"""
+            Error: {e}
+            
+            Configuration file missing. Creating now with default settings.
+            
+            NOTE: You can modify the configuration settings by running the command `poetry run edit-config`at {cwd} in the terminal.
+        """
+        )
+        config = cmd_utils.DEFAULT_CONFIG
+        cmd_utils.save_config(config)
+        return config
