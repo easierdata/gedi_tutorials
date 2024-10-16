@@ -79,7 +79,7 @@ This script accesses the GEDI L4A dataset using [NASA's OPeNDAP Hyrax](https://o
 This script contains a set of defined command functions that are called with with the [`run` command](https://python-poetry.org/docs/cli#run) from poetry. Here are the available commands:
 
 - **edit-config**: Modify the configuration file interactively through the command line.
-- **print-config**: Print the default configuration file.
+- **print-default**: Print the default configuration file.
 - **reset-config**: Reset the configuration file back to the default settings.
 - **check-config**: Check that the configuration file is valid and that the IPFS and STAC endpoints are reachable.
 
