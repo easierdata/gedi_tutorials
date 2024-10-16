@@ -76,7 +76,7 @@ This script accesses the GEDI L4A dataset using [NASA's OPeNDAP Hyrax](https://o
 ```
 
 ## 4. poetry_cmds.py
-This script contains a set of defined command functions that are called with with the [`run` command](https://python-poetry.org/docs/cli#run) from poetry. Here are the available commands:
+This script contains a set of defined command functions called with the [`run` command](https://python-poetry.org/docs/cli#run) from poetry. Here are the available commands:
 
 - **edit-config**: Modify the configuration file interactively through the command line.
 - **print-default**: Print the default configuration file.
