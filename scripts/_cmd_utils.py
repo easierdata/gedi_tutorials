@@ -13,7 +13,7 @@ STAC_ENDPOINT = "https://stac.easierdata.info"
 
 # Set default configuration dictionary
 DEFAULT_CONFIG = {
-    "ipfs_endpoint": IPFS_GATEWAY_ADDR,
+    "ipfs_gateway_ip": IPFS_GATEWAY_ADDR,
     "ipfs_api_port": IPFS_API_PORT,
     "ipfs_gateway_port": IPFS_GATEWAY_PORT,
     "stac_endpoint": STAC_ENDPOINT,
@@ -37,7 +37,7 @@ def check_stac_endpoint():
 def check_ipfs_settings():
     config = json.load(open(CONFIG_FILE_NAME))
 
-    ipfs_addr = config["ipfs_endpoint"]
+    ipfs_addr = config["ipfs_gateway_ip"]
 
     # Check if the IPFS gateway port is set correctly
     gateway_port = config["ipfs_gateway_port"]
@@ -54,8 +54,8 @@ def modify_config():
     config_params = DEFAULT_CONFIG
     print("Welcome to the configuration setup wizard")
     print("Please provide the following information to setup the configuration")
-    config_params["ipfs_endpoint"] = (
-        input(f"Enter the IPFS endpoint (default: {IPFS_GATEWAY_ADDR}): ")
+    config_params["ipfs_gateway_ip"] = (
+        input(f"Enter the IPFS gateway address (default: {IPFS_GATEWAY_ADDR}): ")
         or IPFS_GATEWAY_ADDR
     )
     config_params["ipfs_api_port"] = (
