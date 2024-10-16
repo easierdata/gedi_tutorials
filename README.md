@@ -34,11 +34,13 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
    poetry install
    ```
 
-4. Generate the configuration file
+4. Generate the configuration file by running the following command.
 
     ```shell
     poetry run edit-config
     ```
+
+   > A file named `config.json` is generated in the root directory and can be modified by re-running the command. See this [page](scripts/README.md/#4-poetry_cmdspy) for more details on the available commands.
 
 5. Run Jupyter Notebook and start with a tutorial.
     
