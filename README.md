@@ -9,7 +9,7 @@
 
 
 ## Overview      
-These tutorials demonstrate how to discover, access, and use [GEDI science data products](https://daac.ornl.gov/gedi) from decentralized sources such as IPFS. The GEDI collection is maintained and archived at the ORNL DAAC. GEDI L3, L4A, and L4B data products are available from decentralized and centralized sources as noted in [various data tools and services](services.md).
+These tutorials demonstrate how to discover, access, and use [GEDI science data products](https://daac.ornl.gov/gedi) from decentralized sources such as [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/). The GEDI collection is maintained and archived at the ORNL DAAC. GEDI L3, L4A, and L4B data products are available from decentralized and centralized sources as noted in [various data tools and services](services.md).
 
 ## Getting Started: Clone repo and deploy poetry project
 
