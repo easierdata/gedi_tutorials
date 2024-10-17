@@ -40,7 +40,7 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
     poetry run edit-config
     ```
 
-   > A file named `config.json` is generated in the root directory and can be modified by re-running the command. See this [page](scripts/README.md/#4-poetry_cmdspy) for more details on the available commands.
+   > A file named `config.json` is generated in the root directory and can be modified by re-running the command. See this [page](scripts/README.md/#1-poetry_cmdspy) for more details on the available commands.
 
 5. Run Jupyter Notebook and start with a tutorial.
     
@@ -52,10 +52,7 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
 ### :green_book: Jupyter Notebooks 
 1. [Search and download GEDI L4A dataset](1_gedi_l4a_search_download.ipynb): search and download GEDI L4A granules over an area of interest to a local machine
 2. [Subset GEDI L4A footprints](2_gedi_l4a_subsets.ipynb): subset downloaded GEDI L4A granules to an area of interest
-4. [Explore GEDI L4A data structure](3_gedi_l4a_exploring_data.ipynb): explore data structure, variables, and quality flags of the GEDI L4A dataset. 
-
-
-### :computer: Python Scripts
+3. [Explore GEDI L4A data structure](3_gedi_l4a_exploring_data.ipynb): explore data structure, variables, and quality flags of the GEDI L4A dataset. 
 
 
 ## Related Resources
