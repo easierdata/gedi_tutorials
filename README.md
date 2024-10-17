@@ -1,15 +1,15 @@
-# Tutorials on GEDI Science Data Products
+# Tutorials on GEDI Science Data Products from the DWeb
 
-**Author:** ORNL DAAC & EASIER Data       
-**Date:** August 26, 2021       
-**Updated on:** October 1, 2024       
-**Contact for the ORNL DAAC:** uso@daac.ornl.gov       
-**Contact for EASIER Data:** toshan@umd.edu       
-**Keywords:** lidar, GEDI, AGBD, aboveground biomass, IPFS, Filecoin       
+**Author:** ORNL DAAC & EASIER Data  
+**Date:** August 26, 2021  
+**Updated on:** October 1, 2024  
+**Contact for the ORNL DAAC:** [uso@daac.ornl.gov](uso@daac.ornl.gov)  
+**Contact for EASIER Data:** [toshan@umd.edu](toshan@umd.edu)  
+**Keywords:** lidar, GEDI, AGBD, aboveground biomass, IPFS, Filecoin  
 
+## Overview
 
-## Overview      
-These tutorials demonstrate how to discover, access, and use [GEDI science data products](https://daac.ornl.gov/gedi) from decentralized sources such as [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/). The GEDI collection is maintained and archived at the ORNL DAAC. GEDI L3, L4A, and L4B data products are available from decentralized and centralized sources, as noted in [various data tools and services](services.md).
+The [EASIER Data Initiative](https://easierdata.org/) is exploring the use of decentralized web technologies such as [IPFS](https://docs.ipfs.tech/concepts/what-is-ipfs/) and [Filecoin](https://docs.filecoin.io/basics/what-is-filecoin) to store and distribute Earth science data. These tutorials demonstrate how to discover, access, and use [GEDI science data products](https://daac.ornl.gov/gedi) from decentralized sources using the [DWeb](https://dweb-primer.ipfs.io/). The GEDI collection is maintained and archived at the ORNL DAAC. GEDI L3, L4A, and L4B data products are available from decentralized and centralized sources, as noted in [various data tools and services](services.md).
 
 ## Getting Started: Clone repo and deploy poetry project
 
@@ -43,21 +43,23 @@ This project uses [Poetry](https://python-poetry.org/) for dependency management
    > A file named `config.json` is generated in the root directory and can be modified by re-running the command. See this [page](scripts/README.md/#1-poetry_cmdspy) for more details on the available commands.
 
 5. Run Jupyter Notebook and start with a tutorial.
-    
+
     ```shell
     poetry run jupyter notebook
-    ``` 
+    ```
 
 ## GEDI L4A Footprint Level Aboveground Biomass Density
-### :green_book: Jupyter Notebooks 
+
+### :green_book: Jupyter Notebooks
+
 1. [Search and download GEDI L4A dataset](1_gedi_l4a_search_download.ipynb): search and download GEDI L4A granules over an area of interest to a local machine
 2. [Subset GEDI L4A footprints](2_gedi_l4a_subsets.ipynb): subset downloaded GEDI L4A granules to an area of interest
-3. [Explore GEDI L4A data structure](3_gedi_l4a_exploring_data.ipynb): explore data structure, variables, and quality flags of the GEDI L4A dataset. 
-
+3. [Explore GEDI L4A data structure](3_gedi_l4a_exploring_data.ipynb): explore data structure, variables, and quality flags of the GEDI L4A dataset.
 
 ## Related Resources
 
-- Learn about the EASIER Data Initiative: [Easier Data](https://easierdata.org/about)
+- Learn about the [EASIER Data Initiative](https://easierdata.org/about)
+- [ipfs-stac](https://github.com/easierdata/ipfs-stac): Python client utilized for interfacing with the Easier STAC Server
 - NASA Earthdata Webinar: [Explore NASA GEDI Aboveground Biomass Datasets, Services, and Tools at NASA's ORNL DAAC](https://daac.ornl.gov/resources/tutorials/2022_earthdata_webinar/)
 - ESA Workshop: [Synergistic Use of SAR and Lidar Data for Terrestrial Ecology Research](https://daac.ornl.gov/resources/workshops/esa-2021-workshop/)
 
