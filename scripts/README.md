@@ -1,5 +1,27 @@
 # Python scripts
 
+## 1. poetry_cmds.py
+This script contains a set of defined command functions called with the [`run` command](https://python-poetry.org/docs/cli#run) from poetry. Here are the available commands:
+
+- **edit-config**: Modify the configuration file interactively through the command line.
+- **print-default**: Print the default configuration file.
+- **reset-config**: Reset the configuration file back to the default settings.
+- **check-config**: Check that the configuration file is valid and that the IPFS and STAC endpoints are reachable.
+
+### usage
+```bash
+poetry run <command>
+```
+
+## 2. easier_utils.py
+This script contains a set of utility functions that are reused across the notebooks and scripts in this repository. 
+
+---
+
+## Additional Scripts
+The following scripts, located [here](./additional%20resources/), are additional tools for working with GEDI L4A data.
+
+
 ## 1. gedi_l4a_search_download.py
 
 This script downloads GEDI L4A granules to a local directory based on GeoJSON polygon and start/end dates. First, set up NASA Earthdata Login authentication using a `.netrc` file. Please refer to the instructions here: https://wiki.earthdata.nasa.gov/display/EL/How+To+Access+Data+With+cURL+And+Wget. 

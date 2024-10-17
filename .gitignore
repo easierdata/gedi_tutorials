@@ -1,0 +1,12 @@
+# Ignore ccontent in the following folders
+subsets/
+full_orbits/
+.ipynb_checkpoints
+**__pycache__**
+.venv
+
+# Ignore the following files in the root directory
+*.pyc
+*.pyo
+*granules.txt
+*config.json
