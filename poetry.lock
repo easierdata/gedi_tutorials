@@ -1513,13 +1513,13 @@ type = ["pytest-mypy"]
 
 [[package]]
 name = "ipfs-stac"
-version = "0.1.12"
+version = "0.2.0"
 description = "The EASIER Data Initiative Python IPFS-STAC Client"
 optional = false
 python-versions = "*"
 files = [
-    {file = "ipfs_stac-0.1.12-py3-none-any.whl", hash = "sha256:a665590dba1c0fb8448d37fca0b5c47ddacabaf6fa2642d092e17a94342faf58"},
-    {file = "ipfs_stac-0.1.12.tar.gz", hash = "sha256:b676aa8cbe9834660549127d668b1451ca43aea70017b9ac031a38dc1d50664f"},
+    {file = "ipfs_stac-0.2.0-py3-none-any.whl", hash = "sha256:04f9ca8359b95dc47e8029dedd88e628ae9fd99150aca820874281e90c975133"},
+    {file = "ipfs_stac-0.2.0.tar.gz", hash = "sha256:64ffe204830c41fc4119a271fdd1bb487bdc890ae597e23a89f4f4fc5ffba69f"},
 ]
 
 [package.dependencies]
@@ -1529,9 +1529,11 @@ ipfsspec = "*"
 numpy = "*"
 pandas = "*"
 Pillow = "*"
+psutil = "*"
 pystac-client = "*"
 rasterio = "*"
 requests = "*"
+yaspin = "*"
 
 [[package]]
 name = "ipfsspec"
@@ -4269,6 +4271,20 @@ files = [
 widechars = ["wcwidth"]
 
 [[package]]
+name = "termcolor"
+version = "2.3.0"
+description = "ANSI color formatting for output in terminal"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "termcolor-2.3.0-py3-none-any.whl", hash = "sha256:3afb05607b89aed0ffe25202399ee0867ad4d3cb4180d98aaf8eefa6a5f7d475"},
+    {file = "termcolor-2.3.0.tar.gz", hash = "sha256:b5b08f68937f138fe92f6c089b99f1e2da0ae56c52b78bf7075fd95420fd9a5a"},
+]
+
+[package.extras]
+tests = ["pytest", "pytest-cov"]
+
+[[package]]
 name = "terminado"
 version = "0.18.1"
 description = "Tornado websocket backend for the Xterm.js Javascript terminal emulator library."
@@ -4684,6 +4700,20 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [[package]]
+name = "yaspin"
+version = "3.1.0"
+description = "Yet Another Terminal Spinner"
+optional = false
+python-versions = "<4.0,>=3.9"
+files = [
+    {file = "yaspin-3.1.0-py3-none-any.whl", hash = "sha256:5e3d4dfb547d942cae6565718123f1ecfa93e745b7e51871ad2bbae839e71b73"},
+    {file = "yaspin-3.1.0.tar.gz", hash = "sha256:7b97c7e257ec598f98cef9878e038bfa619ceb54ac31d61d8ead2b3128f8d7c7"},
+]
+
+[package.dependencies]
+termcolor = ">=2.2.0,<2.4.0"
+
+[[package]]
 name = "zipp"
 version = "3.20.2"
 description = "Backport of pathlib-compatible object wrapper for zip files"
@@ -4705,4 +4735,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "1afeed0e5dc4fa1c65d431ebd9356c67c4942ff1269f007e0d7378b77dd90f3f"
+content-hash = "787750dac38efaa9532c5cc91c6b006f33fc9cba8cd26416537c8cdea28bb7fa"
